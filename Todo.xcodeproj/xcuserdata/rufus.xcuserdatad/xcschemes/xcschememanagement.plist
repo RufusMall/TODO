@@ -6,8 +6,28 @@
 	<dict>
 		<key>Todo.xcscheme_^#shared#^_</key>
 		<dict>
+			<key>isShown</key>
+			<true/>
 			<key>orderHint</key>
 			<integer>0</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>AC554B39244A03B000B6DA98</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>AC554B54244A03B100B6DA98</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>AC554B5F244A03B100B6DA98</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>
