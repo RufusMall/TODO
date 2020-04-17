@@ -5,4 +5,9 @@ Example TODO App written in Obj-C - using realm as the data store
 
 ## Build Instructions
 
-TODO://
+The REALM dependancy is included via cocoapods.
+
+To build the project:
+navigate to the route of the directory, and run "pod install" in terminal
+Open Todo.xcworkspace to open the project, and then build as normal.
+
