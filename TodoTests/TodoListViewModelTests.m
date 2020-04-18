@@ -9,6 +9,46 @@
 #import <XCTest/XCTest.h>
 #import "ToDoListViewModel.h"
 
+@interface ToDoListViewMock : NSObject<TodoListView>
+@property (strong,nonnull) XCTestExpectation* expectation;
+@property (nonatomic) BOOL didReload;
+@property (nonatomic) BOOL didUpdateWithChanges;
+-(instancetype)init: (XCTestExpectation*)expectation;
+@end
+
+@implementation ToDoListViewMock
+- (instancetype)init:(XCTestExpectation *)expectation {
+    self = [super init];
+    if (self) {
+        self.expectation = expectation;
+        _didReload = NO;
+        _didUpdateWithChanges = NO;
+    }
+    return self;
+}
+
+- (void)showError:(nonnull NSString *)error {
+    
+}
+
+- (void)reloadItems {
+    self.didReload = YES;
+    [self.expectation fulfill];
+}
+
+- (void)updateWithChanges:(nonnull RLMCollectionChange *)changes {
+    self.didUpdateWithChanges = YES;
+    [self.expectation fulfill];
+}
+
+@end
+
+@interface TodoListViewModelTests : XCTestCase
+@property (strong,nonnull) ToDoListViewModel* viewModel;
+@property (strong,nonnull) RLMRealm* realm;
+@property (strong,nonnull) ToDoListViewMock* view;
+@end
+
 @implementation TodoListViewModelTests
 
 - (void)setUp {
@@ -100,44 +140,4 @@ NSString *letters = @"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ012345
     return randomString;
 }
 
-@end
-
-@interface ToDoListViewMock : NSObject<TodoListView>
-@property (strong,nonnull) XCTestExpectation* expectation;
-@property (nonatomic) BOOL didReload;
-@property (nonatomic) BOOL didUpdateWithChanges;
--(instancetype)init: (XCTestExpectation*)expectation;
-@end
-
-@implementation ToDoListViewMock
-- (instancetype)init:(XCTestExpectation *)expectation {
-    self = [super init];
-    if (self) {
-        self.expectation = expectation;
-        _didReload = NO;
-        _didUpdateWithChanges = NO;
-    }
-    return self;
-}
-
-- (void)showError:(nonnull NSString *)error {
-    
-}
-
-- (void)reloadItems {
-    self.didReload = YES;
-    [self.expectation fulfill];
-}
-
-- (void)updateWithChanges:(nonnull RLMCollectionChange *)changes {
-    self.didUpdateWithChanges = YES;
-    [self.expectation fulfill];
-}
-
-@end
-
-@interface TodoListViewModelTests : XCTestCase
-@property (strong,nonnull) ToDoListViewModel* viewModel;
-@property (strong,nonnull) RLMRealm* realm;
-@property (strong,nonnull) ToDoListViewMock* view;
 @end
