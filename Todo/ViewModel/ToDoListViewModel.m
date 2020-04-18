@@ -39,6 +39,12 @@
     }];
 }
 
+-(void)deleteToDoAtRow:(NSInteger)row {
+    [self.realm transactionWithBlock:^{
+        [self.realm deleteObject:self.todoResults[row]];
+    }];
+}
+
 -(void)registerNotification {
     __weak typeof(self) weakSelf = self;
     self.notificationToken = [self.todoResults
@@ -55,23 +61,6 @@
         }
         
         [weakSelf.view updateWithChanges:changes];
-        
-        //           UITableView *tableView = weakSelf.tableView;
-        //           // Initial run of the query will pass nil for the change information
-        //           if (!changes) {
-        //               [tableView reloadData];
-        //               return;
-        //           }
-        //
-        //           // Query results have changed, so apply them to the UITableView
-        //           [tableView beginUpdates];
-        //           [tableView deleteRowsAtIndexPaths:[changes deletionsInSection:0]
-        //                            withRowAnimation:UITableViewRowAnimationAutomatic];
-        //           [tableView insertRowsAtIndexPaths:[changes insertionsInSection:0]
-        //                            withRowAnimation:UITableViewRowAnimationAutomatic];
-        //           [tableView reloadRowsAtIndexPaths:[changes modificationsInSection:0]
-        //                            withRowAnimation:UITableViewRowAnimationAutomatic];
-        //           [tableView endUpdates];
     }];
 }
 

@@ -98,6 +98,19 @@
     XCTAssertEqual(self.viewModel.todoResults.count, 1);
 }
 
+-(void)testDeleteToDo {
+    XCTAssertEqual(self.viewModel.todoResults.count, 0);
+    [self.viewModel start];
+    
+    ToDo* todo = [[ToDo alloc] init];
+    todo.name = @"Clean Desk";
+    [self.viewModel addTodo: todo];
+    XCTAssertEqual(self.viewModel.todoResults.count, 1);
+    
+    [self.viewModel deleteToDoAtRow: 0];
+    XCTAssertEqual(self.viewModel.todoResults.count, 0);
+}
+
 #pragma mark - test notifications
 
 -(void)testReloadTriggeredOnEmpty {

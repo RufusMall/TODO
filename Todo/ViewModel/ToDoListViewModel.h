@@ -23,6 +23,7 @@ NS_ASSUME_NONNULL_BEGIN
 -(instancetype)init:(RLMRealm*)realm view:(id<TodoListView>)view;
 -(void)start;
 -(void)addTodo:(ToDo*)todo;
+-(void)deleteToDoAtRow:(NSInteger)row;
 @end
 
 NS_ASSUME_NONNULL_END
