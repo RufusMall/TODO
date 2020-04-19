@@ -27,6 +27,7 @@ NS_ASSUME_NONNULL_BEGIN
 -(TodoItemViewModel*)itemForRow:(NSInteger)row;
 -(void)addTodo:(ToDo*)todo;
 -(void)updateTodoAtRow:(NSInteger)row withText:(NSString*)text;
+-(void)updateTodoAtRow:(NSInteger)row isCompleted:(BOOL)completed;
 -(void)deleteToDoAtRow:(NSInteger)row;
 @end
 

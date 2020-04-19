@@ -14,6 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 @protocol TodoTableViewCellDelegate
 -(void)todoCellDidBeginEditing:(ToDoTableViewCell*)cell;
 -(void)todoCellDidEndEditing:(ToDoTableViewCell*)cell;
+-(void)todoCell:(ToDoTableViewCell*)cell didToggleCompleted:(BOOL)isCompleted;
 -(void)adjustSizeForCell:(ToDoTableViewCell*)cell;
 @end
 

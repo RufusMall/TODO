@@ -44,7 +44,7 @@ NSString *toDoCellId = @"ToDoCell";
     [self.tableView reloadRowsAtIndexPaths:[changes modificationsInSection:0] withRowAnimation:UITableViewRowAnimationAutomatic];
     [self.tableView endUpdates];
     
-    if (changes.insertions.count > 0) {
+    if (changes.deletions.count == 0 && changes.insertions.count == 1) {
         NSNumber* row = changes.insertions.lastObject;
         NSIndexPath* lastCellPath = [NSIndexPath indexPathForRow:row.integerValue  inSection:0];
         
@@ -100,5 +100,9 @@ NSString *toDoCellId = @"ToDoCell";
     [self.tableView endUpdates];
 }
 
+- (void)todoCell:(ToDoTableViewCell *)cell didToggleCompleted:(BOOL)isCompleted {
+    NSIndexPath* indexPath = [self.tableView indexPathForCell:cell];
+    [self.viewModel updateTodoAtRow:indexPath.row isCompleted:isCompleted];
+}
 @end
 

@@ -45,7 +45,7 @@
 
 -(TodoItemViewModel *)itemForRow:(NSInteger)row {
     ToDo* todo = self.todoResults[row];
-    TodoItemViewModel* viewModel = [[TodoItemViewModel alloc]initWith:todo.name];
+    TodoItemViewModel* viewModel = [[TodoItemViewModel alloc]initWith:todo.name completionState:todo.isCompleted];
     return viewModel;
 }
 
@@ -53,6 +53,14 @@
     [self.realm transactionWithBlock:^{
         ToDo* todo = self.todoResults[row];
         todo.name = text;
+        [self.realm addOrUpdateObject:todo];
+    }];
+}
+
+-(void)updateTodoAtRow:(NSInteger)row isCompleted:(BOOL)completed {
+    [self.realm transactionWithBlock:^{
+        ToDo* todo = self.todoResults[row];
+        todo.isCompleted = completed;
         [self.realm addOrUpdateObject:todo];
     }];
 }

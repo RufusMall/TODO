@@ -12,7 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface TodoItemViewModel : NSObject
 @property(strong,nonatomic) NSString* name;
--(instancetype)initWith:(NSString*)name;
+@property(nonatomic) BOOL isCompleted;
+-(instancetype)initWith:(NSString*)name completionState:(BOOL)isCompleted;
 @end
 
 NS_ASSUME_NONNULL_END

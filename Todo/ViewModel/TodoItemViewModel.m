@@ -10,11 +10,11 @@
 
 @implementation TodoItemViewModel
 
--(instancetype)initWith:(NSString*)name
-{
+-(instancetype)initWith:(NSString*)name completionState:(BOOL)isCompleted {
     self = [super init];
     if (self) {
         _name = name;
+        _isCompleted = isCompleted;
     }
     return self;
 }

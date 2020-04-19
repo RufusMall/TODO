@@ -16,30 +16,43 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ToDoCell" id="LKq-Vl-5Nv" customClass="ToDoTableViewCell">
-                                <rect key="frame" x="0.0" y="28" width="414" height="224"/>
+                                <rect key="frame" x="0.0" y="28" width="414" height="257"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="LKq-Vl-5Nv" id="nbD-Jw-GPh">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="224"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="257"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Phs-6T-RRe">
-                                            <rect key="frame" x="20" y="20" width="374" height="184"/>
+                                            <rect key="frame" x="70" y="20" width="324" height="217"/>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                             <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                             <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         </textView>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bEd-7N-Tbb" customClass="RoundToggleButton">
+                                            <rect key="frame" x="20" y="103.5" width="50" height="50"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="50" id="IXM-HC-nEm"/>
+                                                <constraint firstAttribute="height" constant="50" id="Ixw-vn-lqS"/>
+                                            </constraints>
+                                            <connections>
+                                                <action selector="toggleButtonDidToggle:" destination="LKq-Vl-5Nv" eventType="touchUpInside" id="Ra7-Bl-6nH"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="Phs-6T-RRe" firstAttribute="leading" secondItem="nbD-Jw-GPh" secondAttribute="leading" constant="20" symbolic="YES" id="Tfv-av-1sx"/>
+                                        <constraint firstItem="bEd-7N-Tbb" firstAttribute="centerY" secondItem="nbD-Jw-GPh" secondAttribute="centerY" id="EBA-Zk-d7h"/>
                                         <constraint firstItem="Phs-6T-RRe" firstAttribute="top" secondItem="nbD-Jw-GPh" secondAttribute="top" constant="20" symbolic="YES" id="WRc-lC-DCS"/>
                                         <constraint firstAttribute="trailing" secondItem="Phs-6T-RRe" secondAttribute="trailing" constant="20" symbolic="YES" id="Yv4-pQ-xg3"/>
                                         <constraint firstAttribute="bottom" secondItem="Phs-6T-RRe" secondAttribute="bottom" constant="20" symbolic="YES" id="lnE-eV-Lnw"/>
+                                        <constraint firstItem="Phs-6T-RRe" firstAttribute="leading" secondItem="bEd-7N-Tbb" secondAttribute="trailing" id="wL1-nT-sau"/>
+                                        <constraint firstItem="bEd-7N-Tbb" firstAttribute="leading" secondItem="nbD-Jw-GPh" secondAttribute="leading" constant="20" symbolic="YES" id="xfa-Zw-WYQ"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="titleTextView" destination="Phs-6T-RRe" id="dwg-z4-vgh"/>
+                                    <outlet property="toggleButton" destination="bEd-7N-Tbb" id="boD-Ss-xwo"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -60,7 +73,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HbM-0Y-1aW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1046" y="138"/>
+            <point key="canvasLocation" x="1044.9275362318842" y="137.94642857142856"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="hxO-QH-Pj3">
