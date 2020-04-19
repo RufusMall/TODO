@@ -11,6 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface ToDo : RLMObject
+@property(strong, nonatomic) NSString* id;
 @property(strong, nonatomic) NSString* name;
 @end
 

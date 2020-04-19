@@ -9,4 +9,14 @@
 #import "ToDo.h"
 
 @implementation ToDo
-@end // none needed
+
++ (NSString *)primaryKey {
+    return @"id";
+}
+
++ (NSDictionary *)defaultPropertyValues {
+    NSUUID *uuid = [NSUUID UUID];
+    NSString *strUuid = [uuid UUIDString];
+    return @{@"id" : strUuid};
+}
+@end

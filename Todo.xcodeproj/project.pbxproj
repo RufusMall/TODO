@@ -12,7 +12,7 @@
 		697ECF3EFB64092CA63FDE41 /* Pods_Todo_TodoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8A254B943466BC6EC069BAF /* Pods_Todo_TodoUITests.framework */; };
 		AC554B3F244A03B000B6DA98 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AC554B3E244A03B000B6DA98 /* AppDelegate.m */; };
 		AC554B42244A03B000B6DA98 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AC554B41244A03B000B6DA98 /* SceneDelegate.m */; };
-		AC554B45244A03B000B6DA98 /* ToDoListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC554B44244A03B000B6DA98 /* ToDoListViewController.m */; };
+		AC554B45244A03B000B6DA98 /* ToDoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC554B44244A03B000B6DA98 /* ToDoTableViewController.m */; };
 		AC554B48244A03B000B6DA98 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC554B46244A03B000B6DA98 /* Main.storyboard */; };
 		AC554B4A244A03B100B6DA98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC554B49244A03B100B6DA98 /* Assets.xcassets */; };
 		AC554B4D244A03B100B6DA98 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC554B4B244A03B100B6DA98 /* LaunchScreen.storyboard */; };
@@ -20,6 +20,8 @@
 		AC554B5A244A03B100B6DA98 /* TodoListViewModelTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AC554B59244A03B100B6DA98 /* TodoListViewModelTests.m */; };
 		AC554B65244A03B100B6DA98 /* TodoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = AC554B64244A03B100B6DA98 /* TodoUITests.m */; };
 		AC554B74244A046400B6DA98 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = AC554B73244A046400B6DA98 /* README.md */; };
+		ACB1A451244BF2D10026EA23 /* ToDoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ACB1A450244BF2D10026EA23 /* ToDoTableViewCell.m */; };
+		ACB1A454244C108F0026EA23 /* TodoItemViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = ACB1A453244C108F0026EA23 /* TodoItemViewModel.m */; };
 		ACB4FED4244B6AC200BF14BC /* ToDoListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = ACB4FED3244B6AC200BF14BC /* ToDoListViewModel.m */; };
 		ACEF223F244B6B9B008FC988 /* ToDo.m in Sources */ = {isa = PBXBuildFile; fileRef = ACEF223E244B6B9B008FC988 /* ToDo.m */; };
 /* End PBXBuildFile section */
@@ -52,8 +54,8 @@
 		AC554B3E244A03B000B6DA98 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		AC554B40244A03B000B6DA98 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
 		AC554B41244A03B000B6DA98 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
-		AC554B43244A03B000B6DA98 /* ToDoListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ToDoListViewController.h; sourceTree = "<group>"; };
-		AC554B44244A03B000B6DA98 /* ToDoListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ToDoListViewController.m; sourceTree = "<group>"; };
+		AC554B43244A03B000B6DA98 /* ToDoTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ToDoTableViewController.h; sourceTree = "<group>"; };
+		AC554B44244A03B000B6DA98 /* ToDoTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ToDoTableViewController.m; sourceTree = "<group>"; };
 		AC554B47244A03B000B6DA98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AC554B49244A03B100B6DA98 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC554B4C244A03B100B6DA98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -66,6 +68,10 @@
 		AC554B64244A03B100B6DA98 /* TodoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TodoUITests.m; sourceTree = "<group>"; };
 		AC554B66244A03B100B6DA98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC554B73244A046400B6DA98 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		ACB1A44F244BF2D10026EA23 /* ToDoTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ToDoTableViewCell.h; sourceTree = "<group>"; };
+		ACB1A450244BF2D10026EA23 /* ToDoTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ToDoTableViewCell.m; sourceTree = "<group>"; };
+		ACB1A452244C108F0026EA23 /* TodoItemViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TodoItemViewModel.h; sourceTree = "<group>"; };
+		ACB1A453244C108F0026EA23 /* TodoItemViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TodoItemViewModel.m; sourceTree = "<group>"; };
 		ACB4FED2244B6AC100BF14BC /* ToDoListViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ToDoListViewModel.h; sourceTree = "<group>"; };
 		ACB4FED3244B6AC200BF14BC /* ToDoListViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ToDoListViewModel.m; sourceTree = "<group>"; };
 		ACEF223D244B6B9B008FC988 /* ToDo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ToDo.h; sourceTree = "<group>"; };
@@ -141,7 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				ACB4FED5244B6B4C00BF14BC /* Model */,
-				ACB4FED1244B6A9F00BF14BC /* ViewController */,
+				ACB4FED1244B6A9F00BF14BC /* View */,
 				ACB4FED0244B6A8300BF14BC /* ViewModel */,
 				AC554B3D244A03B000B6DA98 /* AppDelegate.h */,
 				AC554B3E244A03B000B6DA98 /* AppDelegate.m */,
@@ -179,17 +185,21 @@
 			children = (
 				ACB4FED2244B6AC100BF14BC /* ToDoListViewModel.h */,
 				ACB4FED3244B6AC200BF14BC /* ToDoListViewModel.m */,
+				ACB1A452244C108F0026EA23 /* TodoItemViewModel.h */,
+				ACB1A453244C108F0026EA23 /* TodoItemViewModel.m */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		ACB4FED1244B6A9F00BF14BC /* ViewController */ = {
+		ACB4FED1244B6A9F00BF14BC /* View */ = {
 			isa = PBXGroup;
 			children = (
-				AC554B43244A03B000B6DA98 /* ToDoListViewController.h */,
-				AC554B44244A03B000B6DA98 /* ToDoListViewController.m */,
+				AC554B43244A03B000B6DA98 /* ToDoTableViewController.h */,
+				AC554B44244A03B000B6DA98 /* ToDoTableViewController.m */,
+				ACB1A44F244BF2D10026EA23 /* ToDoTableViewCell.h */,
+				ACB1A450244BF2D10026EA23 /* ToDoTableViewCell.m */,
 			);
-			path = ViewController;
+			path = View;
 			sourceTree = "<group>";
 		};
 		ACB4FED5244B6B4C00BF14BC /* Model */ = {
@@ -453,12 +463,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC554B45244A03B000B6DA98 /* ToDoListViewController.m in Sources */,
+				AC554B45244A03B000B6DA98 /* ToDoTableViewController.m in Sources */,
 				AC554B3F244A03B000B6DA98 /* AppDelegate.m in Sources */,
+				ACB1A451244BF2D10026EA23 /* ToDoTableViewCell.m in Sources */,
 				ACB4FED4244B6AC200BF14BC /* ToDoListViewModel.m in Sources */,
 				AC554B50244A03B100B6DA98 /* main.m in Sources */,
 				AC554B42244A03B000B6DA98 /* SceneDelegate.m in Sources */,
 				ACEF223F244B6B9B008FC988 /* ToDo.m in Sources */,
+				ACB1A454244C108F0026EA23 /* TodoItemViewModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -631,6 +643,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MQ4Z795YVF;
 				INFOPLIST_FILE = Todo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -649,6 +662,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MQ4Z795YVF;
 				INFOPLIST_FILE = Todo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

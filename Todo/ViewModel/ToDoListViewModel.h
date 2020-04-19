@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <Realm.h>
 #import "ToDo.h"
+#import "TodoItemViewModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 @protocol TodoListView <NSObject>
@@ -18,11 +19,14 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 @interface ToDoListViewModel : NSObject
-@property(strong)RLMResults<ToDo*>* todoResults;
+@property(strong, nonatomic)NSString* title;
+@property(readonly) NSInteger rowCount;
 
 -(instancetype)init:(RLMRealm*)realm view:(id<TodoListView>)view;
 -(void)start;
+-(TodoItemViewModel*)itemForRow:(NSInteger)row;
 -(void)addTodo:(ToDo*)todo;
+-(void)updateTodoAtRow:(NSInteger)row withText:(NSString*)text;
 -(void)deleteToDoAtRow:(NSInteger)row;
 @end
 

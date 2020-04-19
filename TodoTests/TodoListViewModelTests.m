@@ -65,9 +65,14 @@
     // Put teardown code here. This method is called after the invocation of each test method in the class.
 }
 
+- (void)testTitleSet {
+    [self.viewModel start];
+    XCTAssertTrue([self.viewModel.title isEqualToString:@"Todo"]);
+}
+
 - (void)testInitialLoadEmpty {
     [self.viewModel start];
-    XCTAssertEqual(self.viewModel.todoResults.count, 0);
+    XCTAssertEqual(self.viewModel.rowCount, 0);
 }
 
 - (void)testInitialLoad2Items {
@@ -84,31 +89,44 @@
     
     [self.viewModel start];
     
-    XCTAssertEqual(self.viewModel.todoResults.count, 2);
+    XCTAssertEqual(self.viewModel.rowCount, 2);
 }
 
 -(void)testAddToDo {
-    XCTAssertEqual(self.viewModel.todoResults.count, 0);
+    XCTAssertEqual(self.viewModel.rowCount, 0);
     [self.viewModel start];
     
     ToDo* todo = [[ToDo alloc] init];
     todo.name = @"Clean Desk";
     [self.viewModel addTodo: todo];
     
-    XCTAssertEqual(self.viewModel.todoResults.count, 1);
+    XCTAssertEqual(self.viewModel.rowCount, 1);
+}
+
+-(void)testSaveToDo {
+    XCTAssertEqual(self.viewModel.rowCount, 0);
+    [self.viewModel start];
+    
+    ToDo* todo = [[ToDo alloc] init];
+    todo.name = @"Clean Desk";
+    [self.viewModel addTodo: todo];
+    
+    [self.viewModel updateTodoAtRow:0 withText:@"Text Updated"];
+    TodoItemViewModel* viewModelItem = [self.viewModel itemForRow:0];
+    XCTAssertTrue([viewModelItem.name isEqualToString: @"Text Updated"]);
 }
 
 -(void)testDeleteToDo {
-    XCTAssertEqual(self.viewModel.todoResults.count, 0);
+    XCTAssertEqual(self.viewModel.rowCount, 0);
     [self.viewModel start];
     
     ToDo* todo = [[ToDo alloc] init];
     todo.name = @"Clean Desk";
     [self.viewModel addTodo: todo];
-    XCTAssertEqual(self.viewModel.todoResults.count, 1);
+    XCTAssertEqual(self.viewModel.rowCount, 1);
     
     [self.viewModel deleteToDoAtRow: 0];
-    XCTAssertEqual(self.viewModel.todoResults.count, 0);
+    XCTAssertEqual(self.viewModel.rowCount, 0);
 }
 
 #pragma mark - test notifications
