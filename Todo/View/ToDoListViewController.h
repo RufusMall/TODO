@@ -7,9 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ToDoListViewModel.h"
 
-@interface ToDoListViewController : UIViewController
-
-
+@interface ToDoTableViewController : UITableViewController<TodoListView>
 @end
 
