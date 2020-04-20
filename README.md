@@ -40,4 +40,4 @@ This also shows some future features I wanted to/may add.
 -You can tap on a todo to rename it.
 -todo's can be as long as you want - the cell will automatically expand.
 
-The UI/UX could be improve... but I didn't quite have enough time.
+The UI/UX could be improved... but I didn't quite have enough time.
