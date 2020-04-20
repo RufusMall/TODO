@@ -31,7 +31,7 @@
 }
 
 -(void)start {
-    self.todoResults = [ToDo allObjectsInRealm: self.realm] ;
+    self.todoResults = [[ToDo allObjectsInRealm: self.realm] sortedResultsUsingKeyPath:@"creationDate" ascending:YES];
     [self registerNotification];
     self.title = @"Todo";
     NSLog(@"%@", self.todoResults);

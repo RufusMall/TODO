@@ -17,6 +17,6 @@
 + (NSDictionary *)defaultPropertyValues {
     NSUUID *uuid = [NSUUID UUID];
     NSString *strUuid = [uuid UUIDString];
-    return @{@"id" : strUuid};
+    return @{@"id" : strUuid, @"creationDate": [NSDate now]};
 }
 @end
