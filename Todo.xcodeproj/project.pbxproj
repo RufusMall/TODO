@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,14 +12,19 @@
 		697ECF3EFB64092CA63FDE41 /* Pods_Todo_TodoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8A254B943466BC6EC069BAF /* Pods_Todo_TodoUITests.framework */; };
 		AC554B3F244A03B000B6DA98 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AC554B3E244A03B000B6DA98 /* AppDelegate.m */; };
 		AC554B42244A03B000B6DA98 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AC554B41244A03B000B6DA98 /* SceneDelegate.m */; };
-		AC554B45244A03B000B6DA98 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC554B44244A03B000B6DA98 /* ViewController.m */; };
+		AC554B45244A03B000B6DA98 /* ToDoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC554B44244A03B000B6DA98 /* ToDoTableViewController.m */; };
 		AC554B48244A03B000B6DA98 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC554B46244A03B000B6DA98 /* Main.storyboard */; };
 		AC554B4A244A03B100B6DA98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC554B49244A03B100B6DA98 /* Assets.xcassets */; };
 		AC554B4D244A03B100B6DA98 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC554B4B244A03B100B6DA98 /* LaunchScreen.storyboard */; };
 		AC554B50244A03B100B6DA98 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AC554B4F244A03B100B6DA98 /* main.m */; };
-		AC554B5A244A03B100B6DA98 /* TodoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AC554B59244A03B100B6DA98 /* TodoTests.m */; };
+		AC554B5A244A03B100B6DA98 /* TodoListViewModelTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AC554B59244A03B100B6DA98 /* TodoListViewModelTests.m */; };
 		AC554B65244A03B100B6DA98 /* TodoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = AC554B64244A03B100B6DA98 /* TodoUITests.m */; };
 		AC554B74244A046400B6DA98 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = AC554B73244A046400B6DA98 /* README.md */; };
+		ACB1A451244BF2D10026EA23 /* ToDoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ACB1A450244BF2D10026EA23 /* ToDoTableViewCell.m */; };
+		ACB1A454244C108F0026EA23 /* TodoItemViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = ACB1A453244C108F0026EA23 /* TodoItemViewModel.m */; };
+		ACB4FED4244B6AC200BF14BC /* ToDoListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = ACB4FED3244B6AC200BF14BC /* ToDoListViewModel.m */; };
+		ACE4A7CB244CC647002706A2 /* RoundToggleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = ACE4A7CA244CC647002706A2 /* RoundToggleButton.m */; };
+		ACEF223F244B6B9B008FC988 /* ToDo.m in Sources */ = {isa = PBXBuildFile; fileRef = ACEF223E244B6B9B008FC988 /* ToDo.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,20 +55,30 @@
 		AC554B3E244A03B000B6DA98 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		AC554B40244A03B000B6DA98 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
 		AC554B41244A03B000B6DA98 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
-		AC554B43244A03B000B6DA98 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		AC554B44244A03B000B6DA98 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		AC554B43244A03B000B6DA98 /* ToDoTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ToDoTableViewController.h; sourceTree = "<group>"; };
+		AC554B44244A03B000B6DA98 /* ToDoTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ToDoTableViewController.m; sourceTree = "<group>"; };
 		AC554B47244A03B000B6DA98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AC554B49244A03B100B6DA98 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC554B4C244A03B100B6DA98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AC554B4E244A03B100B6DA98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC554B4F244A03B100B6DA98 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		AC554B55244A03B100B6DA98 /* TodoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TodoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		AC554B59244A03B100B6DA98 /* TodoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TodoTests.m; sourceTree = "<group>"; };
+		AC554B59244A03B100B6DA98 /* TodoListViewModelTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TodoListViewModelTests.m; sourceTree = "<group>"; };
 		AC554B5B244A03B100B6DA98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC554B60244A03B100B6DA98 /* TodoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TodoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC554B64244A03B100B6DA98 /* TodoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TodoUITests.m; sourceTree = "<group>"; };
 		AC554B66244A03B100B6DA98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC554B73244A046400B6DA98 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		ACB1A44F244BF2D10026EA23 /* ToDoTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ToDoTableViewCell.h; sourceTree = "<group>"; };
+		ACB1A450244BF2D10026EA23 /* ToDoTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ToDoTableViewCell.m; sourceTree = "<group>"; };
+		ACB1A452244C108F0026EA23 /* TodoItemViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TodoItemViewModel.h; sourceTree = "<group>"; };
+		ACB1A453244C108F0026EA23 /* TodoItemViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TodoItemViewModel.m; sourceTree = "<group>"; };
+		ACB4FED2244B6AC100BF14BC /* ToDoListViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ToDoListViewModel.h; sourceTree = "<group>"; };
+		ACB4FED3244B6AC200BF14BC /* ToDoListViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ToDoListViewModel.m; sourceTree = "<group>"; };
+		ACE4A7C9244CC646002706A2 /* RoundToggleButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RoundToggleButton.h; sourceTree = "<group>"; };
+		ACE4A7CA244CC647002706A2 /* RoundToggleButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RoundToggleButton.m; sourceTree = "<group>"; };
+		ACEF223D244B6B9B008FC988 /* ToDo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ToDo.h; sourceTree = "<group>"; };
+		ACEF223E244B6B9B008FC988 /* ToDo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ToDo.m; sourceTree = "<group>"; };
 		BDCF0BF6A606B351357FEAFC /* Pods-Todo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Todo.release.xcconfig"; path = "Target Support Files/Pods-Todo/Pods-Todo.release.xcconfig"; sourceTree = "<group>"; };
 		C3B5C55990F0865F8FF64D91 /* Pods-Todo-TodoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Todo-TodoUITests.debug.xcconfig"; path = "Target Support Files/Pods-Todo-TodoUITests/Pods-Todo-TodoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		C4D1C1A0577DB2682811B6D6 /* Pods_TodoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TodoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -134,12 +149,15 @@
 		AC554B3C244A03B000B6DA98 /* Todo */ = {
 			isa = PBXGroup;
 			children = (
+				ACE4A7CC244D3E60002706A2 /* NetLib */,
+				ACE4A7C8244CC623002706A2 /* ReusableViews */,
+				ACB4FED5244B6B4C00BF14BC /* Model */,
+				ACB4FED1244B6A9F00BF14BC /* View */,
+				ACB4FED0244B6A8300BF14BC /* ViewModel */,
 				AC554B3D244A03B000B6DA98 /* AppDelegate.h */,
 				AC554B3E244A03B000B6DA98 /* AppDelegate.m */,
 				AC554B40244A03B000B6DA98 /* SceneDelegate.h */,
 				AC554B41244A03B000B6DA98 /* SceneDelegate.m */,
-				AC554B43244A03B000B6DA98 /* ViewController.h */,
-				AC554B44244A03B000B6DA98 /* ViewController.m */,
 				AC554B46244A03B000B6DA98 /* Main.storyboard */,
 				AC554B49244A03B100B6DA98 /* Assets.xcassets */,
 				AC554B4B244A03B100B6DA98 /* LaunchScreen.storyboard */,
@@ -152,7 +170,7 @@
 		AC554B58244A03B100B6DA98 /* TodoTests */ = {
 			isa = PBXGroup;
 			children = (
-				AC554B59244A03B100B6DA98 /* TodoTests.m */,
+				AC554B59244A03B100B6DA98 /* TodoListViewModelTests.m */,
 				AC554B5B244A03B100B6DA98 /* Info.plist */,
 			);
 			path = TodoTests;
@@ -167,6 +185,53 @@
 			path = TodoUITests;
 			sourceTree = "<group>";
 		};
+		ACB4FED0244B6A8300BF14BC /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				ACB4FED2244B6AC100BF14BC /* ToDoListViewModel.h */,
+				ACB4FED3244B6AC200BF14BC /* ToDoListViewModel.m */,
+				ACB1A452244C108F0026EA23 /* TodoItemViewModel.h */,
+				ACB1A453244C108F0026EA23 /* TodoItemViewModel.m */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		ACB4FED1244B6A9F00BF14BC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AC554B43244A03B000B6DA98 /* ToDoTableViewController.h */,
+				AC554B44244A03B000B6DA98 /* ToDoTableViewController.m */,
+				ACB1A44F244BF2D10026EA23 /* ToDoTableViewCell.h */,
+				ACB1A450244BF2D10026EA23 /* ToDoTableViewCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		ACB4FED5244B6B4C00BF14BC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				ACEF223D244B6B9B008FC988 /* ToDo.h */,
+				ACEF223E244B6B9B008FC988 /* ToDo.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		ACE4A7C8244CC623002706A2 /* ReusableViews */ = {
+			isa = PBXGroup;
+			children = (
+				ACE4A7C9244CC646002706A2 /* RoundToggleButton.h */,
+				ACE4A7CA244CC647002706A2 /* RoundToggleButton.m */,
+			);
+			path = ReusableViews;
+			sourceTree = "<group>";
+		};
+		ACE4A7CC244D3E60002706A2 /* NetLib */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = NetLib;
+			sourceTree = "<group>";
+		};
 		C712F8D6C7527E2B3408B316 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -177,7 +242,6 @@
 				91BA2F3CCF5AF8FD5C383D37 /* Pods-TodoTests.debug.xcconfig */,
 				D34297B1FC7B400B3E58AD82 /* Pods-TodoTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -420,10 +484,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC554B45244A03B000B6DA98 /* ViewController.m in Sources */,
+				AC554B45244A03B000B6DA98 /* ToDoTableViewController.m in Sources */,
 				AC554B3F244A03B000B6DA98 /* AppDelegate.m in Sources */,
+				ACB1A451244BF2D10026EA23 /* ToDoTableViewCell.m in Sources */,
+				ACB4FED4244B6AC200BF14BC /* ToDoListViewModel.m in Sources */,
 				AC554B50244A03B100B6DA98 /* main.m in Sources */,
 				AC554B42244A03B000B6DA98 /* SceneDelegate.m in Sources */,
+				ACEF223F244B6B9B008FC988 /* ToDo.m in Sources */,
+				ACB1A454244C108F0026EA23 /* TodoItemViewModel.m in Sources */,
+				ACE4A7CB244CC647002706A2 /* RoundToggleButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -431,7 +500,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC554B5A244A03B100B6DA98 /* TodoTests.m in Sources */,
+				AC554B5A244A03B100B6DA98 /* TodoListViewModelTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -596,6 +665,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MQ4Z795YVF;
 				INFOPLIST_FILE = Todo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -614,6 +684,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MQ4Z795YVF;
 				INFOPLIST_FILE = Todo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
