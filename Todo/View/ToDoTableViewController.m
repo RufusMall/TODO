@@ -29,12 +29,27 @@ NSString *toDoCellId = @"ToDoCell";
     self.title = self.viewModel.title;
 }
 
+#pragma mark - viewModel updates
+
 - (void)reloadItems {
     [self.tableView reloadData];
 }
 
 - (void)showError:(nonnull NSString *)error {
     NSLog(@"%@", error);
+}
+
+- (void)navBarImageChanged {
+    UIImageView* imageView = [[UIImageView alloc] initWithImage:self.viewModel.headerImage];
+    [imageView.widthAnchor constraintEqualToAnchor:imageView.heightAnchor multiplier:1.0].active = true;
+    [imageView.heightAnchor constraintEqualToConstant:25].active = true;
+    
+    UILabel* label = [[UILabel alloc]initWithFrame:CGRectZero];
+    label.text = self.viewModel.title;
+    NSArray* arrangedViews = @[imageView, label];
+    UIStackView* stackview = [[UIStackView alloc]initWithArrangedSubviews:arrangedViews];
+    stackview.spacing = 6.0;
+    self.navigationItem.titleView = stackview;
 }
 
 - (void)updateWithChanges:(nonnull RLMCollectionChange *)changes {
@@ -54,6 +69,8 @@ NSString *toDoCellId = @"ToDoCell";
         [cell.titleTextView selectAll: nil];
     }
 }
+
+#pragma mark - user input
 
 -(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
@@ -104,5 +121,6 @@ NSString *toDoCellId = @"ToDoCell";
     NSIndexPath* indexPath = [self.tableView indexPathForCell:cell];
     [self.viewModel updateTodoAtRow:indexPath.row isCompleted:isCompleted];
 }
+
 @end
 

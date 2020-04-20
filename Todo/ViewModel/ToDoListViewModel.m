@@ -8,9 +8,11 @@
 
 #import "ToDoListViewModel.h"
 #import "ToDo.h"
+#import "WebClient.h"
+#import <UIKit/UIKit.h>
 
 @interface ToDoListViewModel()
-@property(strong, nonnull) RLMRealm* realm;
+@property(strong, nonatomic) RLMRealm* realm;
 @property(strong, nonatomic)RLMResults<ToDo*>* todoResults;
 @property(weak) id<TodoListView> view;
 @property(strong) RLMNotificationToken* notificationToken;
@@ -34,7 +36,19 @@
     self.todoResults = [[ToDo allObjectsInRealm: self.realm] sortedResultsUsingKeyPath:@"creationDate" ascending:YES];
     [self registerNotification];
     self.title = @"Todo";
-    NSLog(@"%@", self.todoResults);
+    
+    NSURLSession* urlSession = [NSURLSession sharedSession];
+      WebClient* webClient = [[WebClient alloc]initWithURLSession:urlSession];
+      
+      NSURL* imageURL = [NSURL URLWithString:@"https://rerunosm.blob.core.windows.net/rerun-public/todo.png"];
+      NSURLRequestCachePolicy cachePolicy = NSURLRequestUseProtocolCachePolicy;
+      [webClient get:imageURL policy:cachePolicy withCompletion:^(NSData * _Nullable data, NSError * _Nullable error) {
+          
+          dispatch_async(dispatch_get_main_queue(), ^{
+              self.headerImage = [UIImage imageWithData:data];
+              [self.view navBarImageChanged];
+          });
+      }];
 }
 
 -(void)addTodo:(ToDo*)todo {

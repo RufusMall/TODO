@@ -41,6 +41,9 @@
     [self.expectation fulfill];
 }
 
+- (void)navBarImageChanged {
+}
+
 @end
 
 @interface TodoListViewModelTests : XCTestCase

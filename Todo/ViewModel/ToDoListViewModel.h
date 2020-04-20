@@ -10,17 +10,20 @@
 #import <Realm.h>
 #import "ToDo.h"
 #import "TodoItemViewModel.h"
+#import <UIKit/UIKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
 @protocol TodoListView <NSObject>
 -(void)showError: (NSString*)error;
 -(void)reloadItems;
 -(void)updateWithChanges:(RLMCollectionChange*)changes;
+-(void)navBarImageChanged;
 @end
 
 @interface ToDoListViewModel : NSObject
 @property(strong, nonatomic)NSString* title;
 @property(readonly) NSInteger rowCount;
+@property(strong, nonatomic) UIImage* headerImage;
 
 -(instancetype)init:(RLMRealm*)realm view:(id<TodoListView>)view;
 -(void)start;
