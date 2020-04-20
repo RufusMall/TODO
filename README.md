@@ -19,7 +19,7 @@ Open Todo.xcworkspace to open the project, and then build as normal.
 
 ## About
 The app was built using MvvM architecture - the view models hold all the state for the UI, and the UI just reflects the data in the ViewModel. This means I could test alot of the code.
-In a real app I would have moved more code out of the view model and into seperate services, and probably considered abstracting realm.
+In a real app I would have moved more code out of the view model and into seperate services, and probably considered abstracting realm all of which would be dependancy injected into the app.
 I used no other third party dependancies other than realm - to keep it simple.
 
 There was a requirement to demonstrate how I would implement caching... I did this by using the built in "stuff" in NSURLSession. 
