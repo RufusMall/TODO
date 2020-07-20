@@ -3,10 +3,10 @@ pipeline
 	agent any
 	stages 
 	{ 
-		stage('Checkout') 
+		stage('build') 
 		{  
 			steps {
-				echo 'Checkout'
+				sh pod install
 			}
 		} 
 	} 
