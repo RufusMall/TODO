@@ -1,1 +1,12 @@
-pipeline { stages { stage('Checkout') {  } } }
+pipeline 
+{ 
+	stages 
+	{ 
+		stage('Checkout') 
+		{  
+			steps {
+				echo 'Checkout'
+			}
+		} 
+	} 
+}
